@@ -34,7 +34,7 @@ public class Ball_Behavior : MonoBehaviour
         if (collisionInfo.collider.tag == "Ground")
         {
             Debug.Log("Ball verlässt Spawn");
-            Destroy(gameObject, 8f);
+            Destroy(gameObject, 5f);
         }
     }
 }
