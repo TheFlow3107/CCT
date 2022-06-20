@@ -18,6 +18,7 @@ public class Target_Yellow : MonoBehaviour
         isDestroyed = false;
         yStart = transform.position.y;
         yChange = Random.Range(-1f, 1f) * Time.deltaTime;
+        TargetSound = GameObject.FindGameObjectWithTag("HitSound").GetComponent<AudioSource>();
         playerPosition = GameObject.FindGameObjectWithTag("Player").transform.position;
     }
 

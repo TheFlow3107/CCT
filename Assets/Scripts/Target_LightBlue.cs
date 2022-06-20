@@ -19,6 +19,7 @@ public class Target_LightBlue : MonoBehaviour
     void Start()
     {
         isDestroyed = false;
+        TargetSound = GameObject.FindGameObjectWithTag("HitSound").GetComponent<AudioSource>();
         playerPosition = GameObject.FindGameObjectWithTag("Player").transform.position;
         xStart = transform.position.x;
         xChange = Random.Range(1f, 2f) * Time.deltaTime;

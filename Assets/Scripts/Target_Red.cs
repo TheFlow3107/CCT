@@ -13,6 +13,7 @@ public class Target_Red : MonoBehaviour
     void Start()
     {
         isDestroyed = false;
+        TargetSound = GameObject.FindGameObjectWithTag("HitSound").GetComponent<AudioSource>();
         playerPosition = GameObject.FindGameObjectWithTag("Player").transform.position;
     }
 

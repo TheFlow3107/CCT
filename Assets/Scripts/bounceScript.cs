@@ -6,6 +6,8 @@ public class bounceScript : MonoBehaviour
 {
     private Rigidbody rb;
 
+    public float force = 5;
+
     Vector3 lastVelocity;
 
     // Start is called before the first frame update 
@@ -26,6 +28,6 @@ public class bounceScript : MonoBehaviour
         var speed = lastVelocity.magnitude;
         var direction = Vector3.Reflect(lastVelocity.normalized, collision.contacts[0].normal);
 
-        rb.velocity = direction * Mathf.Max(speed, 0f);
+        rb.velocity = direction * Mathf.Max(speed, force); //0f
     }
 }

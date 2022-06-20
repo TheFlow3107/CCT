@@ -16,6 +16,7 @@ public class Target_MintGreen : MonoBehaviour
     void Start()
     {
         isDestroyed = false;
+        TargetSound = GameObject.FindGameObjectWithTag("HitSound").GetComponent<AudioSource>();
         xStart = transform.position.x;
         xChange = Random.Range(-1f, 1f) * Time.deltaTime;
         playerPosition = GameObject.FindGameObjectWithTag("Player").transform.position;
